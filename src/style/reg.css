@@ -297,9 +297,150 @@ footer .fu .fright .fpic {
   cursor: pointer;
 }
 #main {
-  height: 500px;
-  background: #d1e7ee;
+  height: 580px;
+  background-color: #f8f8f8;
+  padding-top: 40px;
 }
-#main #red {
-  width: 250px;
+#main .regbox {
+  background: #fff;
+  padding-top: 40px;
+  height: 480px;
+}
+#main .regbox #reg {
+  width: 720px;
+  margin: 0 auto;
+}
+#main .regbox #reg label {
+  width: 20%;
+}
+#main .regbox #reg input {
+  width: 50%;
+}
+#main .regbox #reg div {
+  margin: 15px 0;
+}
+#main .regbox #reg div label {
+  width: 120px;
+  color: #666;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: 400;
+  height: 38px;
+  line-height: 38px;
+}
+#main .regbox #reg div input {
+  height: 38px;
+  width: 300px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid lightgray;
+}
+#main .regbox #reg > div:nth-child(1) input {
+  width: 148px;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  color: #333;
+}
+#main .regbox #reg > div:nth-child(1) select {
+  width: 148px;
+  height: 38px;
+  outline: none;
+}
+#main .regbox #reg .agreed {
+  margin: 20px 0;
+}
+#main .regbox #reg .agreed input[type='checkbox'] {
+  width: auto;
+  height: auto;
+  margin-top: -5px;
+  margin-left: 150px;
+  vertical-align: middle;
+}
+#main .regbox #reg .agreed label {
+  width: auto;
+}
+#main .regbox #reg .agreed a {
+  color: #3e71f7;
+}
+#main .regbox #reg #regbtn {
+  color: #fff;
+  background-color: #e34c00;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 0 16px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 18px;
+  border-width: 1px;
+  background-image: linear-gradient(90deg, #ff4aae, #ff1268);
+  border: 1px solid #ff1268;
+}
+#main .verify {
+  width: 280px;
+  height: 40px;
+  margin-top: 30px;
+}
+#main .verify label {
+  position: relative;
+  left: 68px;
+}
+#main label::before {
+  content: '*';
+  color: red;
+  font-size: 15px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+#main #verify_box {
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  background-color: #d4d4d4;
+  top: -54px;
+  right: -278px;
+}
+#main #verify_xbox {
+  width: 54px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  top: -15px;
+  background: #7BBB55;
+}
+#main #btn {
+  cursor: pointer;
+  width: 54px;
+  height: 40px;
+  background-color: #ffffff;
+  border: solid 1px #d4d4d4;
+  float: right;
+  margin: 0 !important;
+}
+#main .continue {
+  width: 120px;
+  height: 40px;
+  background-color: #d4d4d4;
+  margin: 0 70px;
+  border: none;
+  color: #302f41;
+  font-size: 16px;
+}
+#main .continue:hover {
+  background-color: #eb3626;
+  color: #ffffff;
+}
+#main img {
+  max-width: 100%;
+  margin-top: 0 !important;
 }

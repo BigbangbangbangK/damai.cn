@@ -282,6 +282,115 @@ footer .fu .fright .fpic {
   cursor: pointer;
 }
 #main {
-  height: 500px;
-  background: #d1e7ee;
+  padding-bottom: 20px;
+}
+#main .content_1 {
+  padding: 20px;
+  border: 1px solid #EBEBEB;
+  background: #fff;
+  margin-top: 15px;
+}
+#main .content_1 h3 {
+  font-size: 24px;
+  vertical-align: middle;
+  margin-left: 5px;
+  color: #111;
+  width: 500px;
+  height: 40px;
+}
+#main .content_1 .head_1 {
+  position: relative;
+  display: block;
+}
+#main .content_1 .head_1 :hover {
+  color: #FF1268;
+}
+#main .content_1 .head_1 > img {
+  width: 272px;
+}
+#main .content_1 .head_1 .fcont {
+  width: 272px;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 17px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+#main .content_1 .head_1 .fcont .title {
+  height: 45px;
+  font-size: 16px;
+}
+#main .content_1 .head_1 .fcont .details {
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: 400;
+}
+#main .content_1 .head_1 .fcont .details > span {
+  font-size: 16px;
+}
+#main .content_1 .box-right {
+  width: 33.33333333%;
+  float: left;
+}
+#main .content_1 .box-right .item_1:hover {
+  color: #FF1268;
+  text-decoration: none;
+}
+#main .content_1 .box-right .item_1 .itemimg {
+  width: 118px;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none !important;
+}
+#main .content_1 .box-right .item_1 .itemimg img {
+  width: 100%;
+}
+#main .content_1 .box-right .item_1 .iteminfo {
+  padding: 5px;
+}
+#main .content_1 .box-right .item_1 .iteminfo .title {
+  line-height: 20px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #000;
+}
+#main .content_1 .box-right .item_1 .iteminfo .title:hover {
+  color: #FF1268;
+}
+#main .content_1 .box-right .item_1 .iteminfo .venue,
+#main .content_1 .box-right .item_1 .iteminfo .showtime {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 12px;
+  margin-top: 14px;
+  color: #9B9B9B;
+  overflow: hidden;
+  word-break: break-all;
+}
+#main .content_1 .box-right .item_1 .iteminfo .venue:hover,
+#main .content_1 .box-right .item_1 .iteminfo .showtime:hover {
+  color: #FF1268;
+}
+#main .content_1 .box-right .item_1 .iteminfo .price {
+  font-size: 16px;
+  color: #FF1268;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#main .content_1 .bright > div:nth-child(4) {
+  padding-top: 40px;
+}
+#main .content_1 .bright > div:nth-child(5) {
+  padding-top: 40px;
+}
+#main .content_1 .bright > div:nth-child(6) {
+  padding-top: 40px;
 }

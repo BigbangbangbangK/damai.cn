@@ -8,7 +8,7 @@
     <script data-main="../js/loginmain" src="../../node_modules/requirejs/require.js"></script>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/reg.css">
-    <title>Document</title>
+    <title>注册</title>
 </head>
 
 <body>
@@ -26,16 +26,51 @@
     <!-- section -->
 
     <section id="main">
-        <div class="main">
-            <div class="reg" id="red">
-                <label for="phone">手机号</label>
-                <input type="text" name="phone" id="phone">
-                <label for="password">输入密码</label>
-                <input type="password" name="password" id="password">
-                <label for="agpassword">确认密码</label>
-                <input type="password" name="agpassword" id="agpassword">
-                <button id="regbtn">同意并注册</button>
+        <div class="main container">
+            <div class="center-block regbox">
+                <div class="reg text-center" id="reg">
+                    <div>
+                        <label for="phone">手机号:</label>
+                        <select name="" id="">
+                            <option value="dalu">中国大陆+86</option>
+                            <option value="dalu">中国台湾+886</option>
+                            <option value="dalu">中国香港+852</option>
+                            <option value="dalu">中国澳门+853</option>
+                        </select>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                    <div>
+                        <label for="password">输入密码:</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div>
+                        <label for="agpassword">确认密码:</label>
+                        <input type="password" name="agpassword" id="agpassword">
+                    </div>
+                    <div class="verify">
+                        <label class="text-right">滑动验证码:</label>
+                        <div id="verify_box">
+                            <div id="verify_xbox">
+                                <div id="btn">
+                                    <img src="../img/lllllll.png" />
+                                </div>
+                            </div>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;按住滑块，拖动到最右边
+                        </div>
+
+                    </div>
+                    <script type="text/javascript" src="../js/slide.js"></script>
+
+                    <div class="agreed">
+                        <input type="checkbox" name="agreed" id="">
+                        <span>
+                            我已阅读并同意<a href="">《会员协议》</a>和<a href="">《隐私权条款》</a>
+                        </span>
+                    </div>
+                    <button id="regbtn">同意并注册</button>
+                </div>
             </div>
+
         </div>
     </section>
 

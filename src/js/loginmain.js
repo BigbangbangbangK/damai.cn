@@ -10,6 +10,7 @@ require.config({
     }
 });
 
+// 注册
 require(['jquery', 'reg'], function ($, reg) {
     reg.register('#regbtn')
 })
@@ -17,7 +18,7 @@ require(['jquery', 'reg'], function ($, reg) {
 
 
 
-
+// 登录
 require(['jquery', 'login'], function ($, login) {
     login.loginEv('#loginbtn');
     login.tabs()

@@ -20,10 +20,180 @@
 }
 
 #main {
-    height: 500px;
-    background: rgb(209, 231, 238);
+    height: 580px;
+    background-color: #f8f8f8;
+    padding-top: 40px;
 
-    #red {
-        width: 250px;
+    .regbox {
+        background: #fff;
+        padding-top: 40px;
+        height: 480px;
+
+        #reg {
+            width: 720px;
+            margin: 0 auto;
+
+            label {
+                width: 20%;
+            }
+
+            input {
+                width: 50%;
+            }
+
+            div {
+                margin: 15px 0;
+
+                label {
+                    width: 120px;
+                    color: #666;
+                    text-align: right;
+                    margin-right: 10px;
+                    font-weight: 400;
+                    height: 38px;
+                    line-height: 38px;
+                }
+
+                input {
+                    height: 38px;
+                    width: 300px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: 1px solid lightgray;
+                }
+
+            }
+
+            &>div:nth-child(1) {
+                input {
+                    width: 148px;
+                    // border: none;
+                    outline: none;
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 400;
+                    color: #333;
+                }
+
+                select {
+                    width: 148px;
+                    height: 38px;
+                    outline: none;
+                }
+            }
+
+            .agreed {
+                margin: 20px 0;
+
+                input[type='checkbox'] {
+                    width: auto;
+                    height: auto;
+                    margin-top: -5px;
+                    margin-left: 150px;
+                    vertical-align: middle;
+
+
+                }
+
+                label {
+                    width: auto;
+                }
+
+                a {
+                    color: #3e71f7;
+                }
+            }
+
+            #regbtn {
+                color: #fff;
+                background-color: #e34c00;
+                text-decoration: none;
+                border-radius: 3px;
+                padding: 0 16px;
+                height: 40px;
+                line-height: 38px;
+                font-size: 18px;
+                border-width: 1px;
+                background-image: linear-gradient(90deg, #ff4aae, #ff1268);
+                border: 1px solid #ff1268;
+            }
+        }
+    }
+
+    .verify {
+        width: 280px;
+        height: 40px;
+        margin-top: 30px;
+
+        label {
+            position: relative;
+            left: 68px;
+        }
+    }
+
+    label::before {
+        content: '*';
+        color: red;
+        font-size: 15px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 3px;
+    }
+
+    #verify_box {
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        color: #fff;
+        position: relative;
+        background-color: rgba(212, 212, 212, 1);
+        top: -54px;
+        right: -278px;
+    }
+
+    #verify_xbox {
+        width: 54px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        color: #fff;
+        position: absolute;
+        top: -15px;
+        // right: -278px;
+        background: #7BBB55;
+    }
+
+    #btn {
+        cursor: pointer;
+        width: 54px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 1);
+        border: solid 1px rgba(212, 212, 212, 1);
+        float: right;
+        margin: 0 !important;
+    }
+
+    .continue {
+        width: 120px;
+        height: 40px;
+        background-color: rgba(212, 212, 212, 1);
+        margin: 0 70px;
+        border: none;
+        color: #302f41;
+        font-size: 16px;
+    }
+
+    .continue:hover {
+        background-color: rgba(235, 54, 38, 1);
+        color: #ffffff;
+    }
+
+    img {
+        max-width: 100%;
+        margin-top: 0 !important;
     }
 }

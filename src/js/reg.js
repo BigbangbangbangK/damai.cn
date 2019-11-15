@@ -16,6 +16,19 @@ define(['jquery', 'md5'], function ($, md5) {
                     }
                 });
             })
+        },
+        // 手机号码验证
+        verify: function () {
+            function fho(callback, wait) {
+                let timer = null;
+                return function () {
+                    if (timer) clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        callback.apply(this, arguments)
+                    }.bind(this), wait)
+                }
+            }
+            $('#reg').on('')
         }
     }
 })
