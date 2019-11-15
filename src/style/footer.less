@@ -1,0 +1,112 @@
+@charset 'utf-8';
+
+footer {
+    background-color: #f8f8f8;
+
+    .footerheader {
+        list-style: none;
+        padding: 30px 100px;
+
+        &>li {
+            float: left;
+            margin: 0 20px;
+            position: relative;
+
+            >a {
+                color: #000;
+
+                &:hover {
+                    color: #ff1268;
+                }
+            }
+
+            &::after {
+                content: '|';
+                display: inline-block;
+                position: absolute;
+                right: -20px;
+            }
+
+            &:last-child {
+                &::after {
+                    content: '';
+
+                }
+            }
+        }
+    }
+
+    .fu {
+        position: relative;
+
+        .f2 {
+            padding-left: 30px;
+            padding-right: 60px;
+
+        }
+
+        .downapp {
+            position: absolute;
+            left: 250px;
+            top: 110px;
+        }
+
+
+
+
+
+        .fright {
+            padding-left: 20px;
+            font-size: 13px;
+
+            .online {
+                display: block;
+                width: 98px;
+                height: 27px;
+                line-height: 27px;
+                text-align: center;
+                background-color: #ff1268;
+                color: #fff;
+                font-size: 14px;
+                border-radius: 20px;
+                cursor: pointer;
+
+            }
+
+            ul {
+                list-style: none;
+                margin: 10px 0;
+
+                li {
+                    float: left;
+                    margin: 0 5px;
+
+                    a {
+                        font-size: 13px;
+                        color: #000;
+
+                        &:hover {
+                            color: #ff1268;
+                        }
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                margin: 6px 5px;
+            }
+
+            .fpic {
+                // margin: 10px 0;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+
+
+}

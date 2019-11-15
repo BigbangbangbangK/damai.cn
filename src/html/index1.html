@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script data-main="../js/main" src="../../node_modules/requirejs/require.js"></script>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <title>index1</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="container">
+            <div class="row">
+                <div class="col-lg-1 headerlogo"><img src="../img/logo1.png" alt=""></div>
+                <div class="col-lg-1 text-right">
+                    <span class="location">全国</span>
+                    <span class="glyphicon glyphicon-triangle-bottom triangle"></span>
+                    <div class="city-header text-left">
+                        <div class="now-city">
+                            <b class="title-city">当前城市:</b>
+                            <span class="name-city select-city">全国</span>
+                        </div>
+                        <div class="hot-city">
+                            <b class="title-city">热门城市:</b>
+                            <div class="list-other"><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=全国">全国</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=北京">北京</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=上海">上海</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=深圳">深圳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=广州">广州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=杭州">杭州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=天津">天津</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=重庆">重庆</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=成都">成都</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=中国香港">中国香港</span></div>
+                        </div>
+                        <div class="other-city">
+                            <b class="title-city">其他城市:</b>
+                            <div class="list-other"><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=北京">北京</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=上海`">上海`</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=天津">天津</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=深圳">深圳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=成都">成都</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=杭州">杭州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=广州">广州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=南京">南京</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=武汉">武汉</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=重庆">重庆</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=苏州">苏州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=西安">西安</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=郑州">郑州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=长沙">长沙</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=宁波">宁波</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=沈阳">沈阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=昆明">昆明</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=济南">济南</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=石家庄">石家庄</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=青岛">青岛</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=合肥">合肥</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=大连">大连</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=厦门">厦门</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=佛山">佛山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=无锡">无锡</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=哈尔滨">哈尔滨</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=南昌">南昌</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=常州">常州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=贵阳">贵阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=福州">福州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=南宁">南宁</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=长春">长春</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=绍兴">绍兴</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=海口">海口</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=太原">太原</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=呼和浩特">呼和浩特</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=凉山">凉山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=烟台">烟台</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=珠海">珠海</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=泉州">泉州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=江门">江门</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=金华">金华</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=宜昌">宜昌</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=东莞">东莞</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=邯郸">邯郸</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=兴安盟">兴安盟</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=中山">中山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=舟山">舟山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=包头">包头</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=陵水">陵水</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=中国澳门">中国澳门</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=兰州">兰州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=泰州">泰州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=唐山">唐山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=潍坊">潍坊</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=柳州">柳州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=扬州">扬州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=银川">银川</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=鞍山">鞍山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=衡水">衡水</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=惠州">惠州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=廊坊">廊坊</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=温州">温州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=嘉兴">嘉兴</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=宿迁">宿迁</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=中国香港">中国香港</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=河源">河源</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=吉林">吉林</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=南通">南通</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=台州">台州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=新乡">新乡</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=徐州">徐州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=遵义">遵义</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=保定">保定</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=滨州">滨州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=湖州">湖州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=荆州">荆州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=丽水">丽水</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=三亚">三亚</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=乌鲁木齐">乌鲁木齐</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=株洲">株洲</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=北海">北海</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=广安">广安</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=九江">九江</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=镇江">镇江</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=蚌埠">蚌埠</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=长治">长治</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=大同">大同</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=抚顺">抚顺</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=聊城">聊城</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=绵阳">绵阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=萍乡">萍乡</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=莆田">莆田</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=普洱">普洱</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=秦皇岛">秦皇岛</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=汕头">汕头</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=芜湖">芜湖</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=襄阳">襄阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=盐城">盐城</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=宜春">宜春</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=营口">营口</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=湛江">湛江</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=安阳">安阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=保山">保山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=宝鸡">宝鸡</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=沧州">沧州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=朝阳">朝阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=郴州">郴州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=崇左">崇左</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=定安">定安</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=贵港">贵港</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=贺州">贺州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=淮安">淮安</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=黄冈">黄冈</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=黄山">黄山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=吉安">吉安</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=焦作">焦作</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=乐山">乐山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=丽江">丽江</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=连云港">连云港</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=六盘水">六盘水</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=马鞍山">马鞍山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=内江">内江</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=盘锦">盘锦</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=平顶山">平顶山</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=黔西南">黔西南</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=曲靖">曲靖</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=三门峡">三门峡</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=威海">威海</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=西宁">西宁</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=咸宁">咸宁</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=许昌">许昌</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=宜宾">宜宾</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=岳阳">岳阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=漳州">漳州</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=资阳">资阳</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=自贡">自贡</span><span class="name-city"
+                                    data-spm="dselectcity&amp;clicktitle=国际及港澳台">国际及港澳台</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center ">
+                    <span class="index">首页</span>
+                    <span>分类</span>
+                </div>
+                <div class="col-lg-5 text-center ">
+                    <input type="text" class="search" placeholder="搜索明星、演出、体育赛事">
+                    <div class="btn-search">搜索</div>
+                </div>
+
+                <div class="col-lg-1 text-right">
+                    登录
+                </div>
+                <div class="col-lg-1 text-right">
+                    下载
+                </div>
+                <div class="col-lg-1 text-right">
+                    English
+                </div>
+            </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- section -->
+    <section id="main">
+
+
+    </section>
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div id="footer" class="container">
+            <ul class="footerheader">
+                <li><a href="javascript:;">帮助中心</a></li>
+                <li><a href="javascript:;">公司介绍</a></li>
+                <li><a href="javascript:;">品牌识别</a></li>
+                <li><a href="javascript:;">公司大事记</a></li>
+                <li><a href="javascript:;">协议及隐私权政策</a></li>
+                <li><a href="javascript:;">廉正举报</a></li>
+                <li><a href="javascript:;">联系合作</a></li>
+                <li><a href="javascript:;">招聘信息</a></li>
+                <li><a href="javascript:;">防骗秘籍</a></li>
+            </ul>
+            <div class="row fu">
+                <img src="../img/foot1.png" alt="大麦logo" class="col-lg-2">
+                <img src="../img/foot2.jpg" alt="二维码" class="col-lg-2 f2">
+                <span class="downapp">APP下载</span>
+                <div class="col-lg-8 fright">
+                    <span class="online">在线客服</span>
+                    <ul class="clearfix">
+                        <li><a href="javascript:;">京ICP证031057号</a></li>
+                        <li>|</li>
+                        <li><a href="javascript:;">京ICP备11043884号</a></li>
+                        <li>|</li>
+                        <li><a href="javascript:;">京公网安备11010502037341号</a></li>
+                        <li>|</li>
+                        <li><a href="javascript:;">广播电视节目制作经营许可证(京)字第02253号</a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li><a href="javascript:;">网络文化经营许可证 京网文[2019]4082-420号</a></li>
+                        <li>|</li>
+                        <li><a href="javascript:;">广播电视节目制作经营许可证(京)字第02253号</a></li>
+                    </ul>
+                    <span>北京红马传媒文化发展有限公司 版权所有大麦网Copyright 2003-2019 All Rights Reserved</span>
+                    <span>举报投诉邮箱：damai_tousu@member.alibaba.com</span>
+                    <span>违法不良信息举报电话：020-62108294</span>
+                    <div class="fpic row">
+                        <img src="../img/foot3.png" alt="" class="col-lg-2">
+                        <img src="../img/foot4.png" alt="" class="col-lg-1">
+                        <img src="../img/foot5.png" alt="" class="col-lg-2">
+                        <img src="../img/foot6.png" alt="" class="col-lg-2">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

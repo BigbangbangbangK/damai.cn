@@ -1,0 +1,287 @@
+@charset 'utf-8';
+* {
+  margin: 0;
+  padding: 0;
+}
+.pointer {
+  cursor: pointer;
+}
+header {
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 2px 16px 0 rgba(220, 220, 220, 0.5);
+  font-size: 16px;
+  font-style: '微软雅黑';
+  font-weight: 400;
+}
+header #header {
+  height: 100%;
+}
+header #header .row > div {
+  height: 100%;
+  line-height: 72px;
+}
+header #header .row .headerlogo {
+  padding: 0;
+}
+header #header .row .headerlogo > img {
+  width: 92px;
+  height: auto;
+  margin-top: 15px;
+  float: left;
+  cursor: pointer;
+}
+header #header .row div:nth-child(2) {
+  padding-right: 0;
+}
+header #header .row div:nth-child(2):hover > .city-header {
+  display: block;
+}
+header #header .row div:nth-child(2) .city-header {
+  width: 626px;
+  z-index: 999;
+  position: absolute;
+  left: -115px;
+  top: 0;
+  margin-top: 60px;
+  background: #FFF;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding: 21px;
+  line-height: 30px;
+  display: none;
+}
+header #header .row div:nth-child(2) .city-header span {
+  margin-right: 8px;
+}
+header #header .row div:nth-child(2) .city-header span:hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(2) .city-header ::after {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 175px;
+  margin-top: -5.5px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fff #fff transparent transparent;
+  transform: rotate(-45deg);
+  box-shadow: 1px -1px 1px #ccc;
+}
+header #header .row .location::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  background: url('../img/logo2.png');
+  background-size: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+header #header .row .triangle {
+  font-size: 12px;
+  cursor: pointer;
+}
+header #header .row div:nth-child(2) > span {
+  cursor: pointer;
+}
+header #header .row div:nth-child(3) {
+  cursor: pointer;
+  padding-left: 0;
+}
+header #header .row div:nth-child(3) > span:nth-child(1) {
+  margin-right: 15px;
+  color: #FF1268;
+}
+header #header .row div:nth-child(3) span:nth-child(2):hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(4) {
+  height: 100%;
+  position: relative;
+}
+header #header .row div:nth-child(4)::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  display: block;
+  background: url('../img/logo3.png');
+  background-size: 18px;
+  position: absolute;
+  left: 100px;
+  top: 27px;
+}
+header #header .row div:nth-child(4) .search {
+  width: 253px;
+  height: 44px;
+  line-height: 72px;
+  z-index: 10;
+  font-size: 16px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  padding: 0 10px 0 54px;
+  border-top-left-radius: 46px;
+  border-bottom-left-radius: 46px;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  border-right-color: #FF1268;
+  box-sizing: content-box;
+}
+header #header .row div:nth-child(4) .btn-search {
+  width: 82px;
+  position: absolute;
+  right: 4px;
+  top: 13px;
+  display: inline-block;
+  background: #FF1268;
+  line-height: 46px;
+  font-size: 16px;
+  text-align: center;
+  color: #FFF;
+  border-radius: 0 27px 27px 0;
+  z-index: 11;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+header #header .row div:nth-child(5) {
+  cursor: pointer;
+  position: relative;
+}
+header #header .row div:nth-child(5)::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: url('../img/logo4.png');
+  background-size: 23px;
+  position: absolute;
+  left: 26px;
+  top: 25px;
+}
+header #header .row div:nth-child(5):hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(6) {
+  cursor: pointer;
+  position: relative;
+}
+header #header .row div:nth-child(6)::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: url('../img/logo5.png');
+  background-size: 23px;
+  position: absolute;
+  left: 27px;
+  top: 25px;
+}
+header #header .row div:nth-child(6):hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(7) {
+  cursor: pointer;
+  position: relative;
+}
+header #header .row div:nth-child(7)::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: url('../img/logo6.png');
+  background-size: 23px;
+  position: absolute;
+  left: 6px;
+  top: 25px;
+}
+header #header .row div:nth-child(7):hover {
+  color: #FF1268;
+}
+footer {
+  background-color: #f8f8f8;
+}
+footer .footerheader {
+  list-style: none;
+  padding: 30px 100px;
+}
+footer .footerheader > li {
+  float: left;
+  margin: 0 20px;
+  position: relative;
+}
+footer .footerheader > li > a {
+  color: #000;
+}
+footer .footerheader > li > a:hover {
+  color: #ff1268;
+}
+footer .footerheader > li::after {
+  content: '|';
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+}
+footer .footerheader > li:last-child::after {
+  content: '';
+}
+footer .fu {
+  position: relative;
+}
+footer .fu .f2 {
+  padding-left: 30px;
+  padding-right: 60px;
+}
+footer .fu .downapp {
+  position: absolute;
+  left: 250px;
+  top: 110px;
+}
+footer .fu .fright {
+  padding-left: 20px;
+  font-size: 13px;
+}
+footer .fu .fright .online {
+  display: block;
+  width: 98px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background-color: #ff1268;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+footer .fu .fright ul {
+  list-style: none;
+  margin: 10px 0;
+}
+footer .fu .fright ul li {
+  float: left;
+  margin: 0 5px;
+}
+footer .fu .fright ul li a {
+  font-size: 13px;
+  color: #000;
+}
+footer .fu .fright ul li a:hover {
+  color: #ff1268;
+}
+footer .fu .fright span {
+  display: block;
+  margin: 6px 5px;
+}
+footer .fu .fright .fpic {
+  margin-top: 10px;
+  cursor: pointer;
+}
+#main {
+  height: 500px;
+  background: #d1e7ee;
+}
