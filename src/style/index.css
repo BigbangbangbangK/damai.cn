@@ -281,6 +281,9 @@ footer .fu .fright .fpic {
   margin-top: 10px;
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 #main {
   padding-bottom: 20px;
 }

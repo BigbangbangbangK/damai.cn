@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script data-main="../js/indexmain.js" src="../../node_modules/requirejs/require.js"></script>
+    <script data-main="../js/deitemmain.js" src="../../node_modules/requirejs/require.js"></script>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/index.css">
-    <title>index1</title>
+    <link rel="stylesheet" href="../style/deitem.css">
+    <title>商品详情页</title>
 </head>
 
 <body>
@@ -204,172 +204,165 @@
             </div>
     </header>
 
-
-
-
-
-
-
-    <!-- section -->
     <section id="main">
         <div class="container">
-            <div id="slide"></div>
-
-            <ul class="nav"></ul>
-
-            <div id="content">
-                <!-- <div class="content_1">
-                    <h3>演唱会</h3>
-                    <div class="row">
-                        <div class="col-lg-3 ">
-                            <a href="javascript:;" class="head_1">
-                                <img src="../img/concert3.jpg" alt="">
-                                <div class="fcont">
-                                    <div class="title">【JM特权】周杰伦2019嘉年华世界巡回演唱会厦门站 Jayme </div>
-                                    <div class="details">¥500<span> 起</span></div>
-                                </div>
-                            </a>
+            <div class="row box">
+                <div class="col-lg-9 content_left">
+                    <!-- <div class="ct1 row">
+                        <div class="col-lg-4 ct1img">
+                            <img src="../img/details1.png" alt="">
+                            <span>总票代</span>
                         </div>
-                        <div class="col-lg-9 bright">
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
+                        <div class="col-lg-8 ct1c ">
+                            <h3>【南京】中国平安“不止 是李健”世界巡回演唱会-南京站【安可场】</h3>
+                            <div class="time">时间:<span>2019.12.21 周六 19:30</span></div>
+                            <div class="place">场馆:<span>南京市 | 南京青奥体育公园体育馆</span></div>
+                            <div class="city">城市<span class="cityactive">深圳</span></div>
+                            <div class="prompt"><i class="glyphicon glyphicon-info-sign"></i> 场次时间均为演出当地时间</div>
+                            <div class="session">场次<span>2019-12-21 周六 19:30</span></div>
+                            <div class="ticket clearfix">票档
+                                <ul>
+                                    <li>380元</li>
+                                    <li>580元</li>
+                                    <li>780元</li>
+                                    <li>980元</li>
+                                    <li class="ticketacitve">1280元</li>
+                                </ul>
                             </div>
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
+                            <div class="num">数量
+                                <div class="numbox">
+                                    <span class="minus min">-</span>
+                                    <input type="text" name="num" id="num" min="1" max="6" value="1">
+                                    <span class="add">+</span>
+                                </div>
                             </div>
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
+                            <div class="total">
+                                合计 <span><b>￥</b><span>1280.00</span></span>
                             </div>
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
-                            </div>
+                            <button id="buy">立即购买</button>
                         </div>
                     </div>
-                </div> -->
-
-                <div class="content_1">
-                    <h3>演唱会</h3>
-                    <div class="row box">
-                        <!-- <div class="col-lg-3 bleft">
-                            <a href="javascript:;" class="head_1">
-                                <img src="../img/concert3.jpg" alt="">
-                                <div class="fcont">
-                                    <div class="title">【JM特权】周杰伦2019嘉年华世界巡回演唱会厦门站 Jayme </div>
-                                    <div class="details">¥500<span> 起</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-9 bright">
-                            <div class="box-right">
-                                <a href="javascript:;" class="item_1">
-                                    <div class="itemimg">
-                                        <img src="../img/concert5.jpg">
-                                    </div>
-                                    <div class="iteminfo">
-                                        <div class="title" title="My Beautiful Live 杨千嬅世界巡回演唱会 海口站">My Beautiful Live
-                                            杨千嬅世界巡回演唱会
-                                            海口站</div>
-                                        <div class="venue">海口市五源河体育中心体育场</div>
-                                        <div class="showtime">2020.01.11 周六 20:00</div>
-                                        <div class="showtime"></div>
-                                        <div class="price">¥298<span>起</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> -->
+                    <div class="ct2 row">
+                        <span class="ct2active">项目详情
+                            <b class="ct2flag bshow"></b>
+                        </span>
+                        <span>购票须知
+                            <b class="ct2flag"></b>
+                        </span>
+                        <span>观演须知
+                            <b class="ct2flag"></b>
+                        </span>
                     </div>
+                    <div class="ct3 row">
+                        <div id="detail" class="list">
+                            <div class="title">演出介绍
+                            </div>
+                            <div class="words">
+                                <p>
+                                    <h3>购票须知</h3>
+                                    <p>1、避免影响抢票体验，请您升级到大麦App最新版本购票；</p>
+                                    <p>2、请您提前在大麦App后台添加完整个人的购票信息，包括身份证、电话、地址，以方便购票；</p>
+                                    <p>3、本项目支持天猫大麦网官方旗舰店购买，请通过无线端下单，PC端暂不支持；</p>
+                                    <p>4、因项目火爆，不支持合并配送，不支持不同订单号连座安排，敬请谅解；</p>
+                                    <p>5、本项目一单一证，每个身份证单次限购6张。</p>
+                                    <p></p>
+                                    <h3>演出介绍</h3>
+                                    <p><img width="600" height="369" src="../img/details2.png">
+                                    </p>
+                                    <p>2018年10月，李健以重庆为起点，开启2018-2020"不止，是李健"世界巡回演唱会。本轮巡演由资深演唱会导演、音乐人陈镇川担纲监制，导演吴政育、音乐总监刘卓、音响设计金少刚、灯光设计林光政及VBANG乐队组成了顶尖制作团队，李健首度挑战四面舞台，通过舞美灯光的艺术形式分解重组，再造意料之外的音乐世界。
+                                    </p>
+                                    <p><img width="600" height="337" src="../img/details3.png">
+                                    </p>
+                                    <p>"不止
+                                        是李健"途经重庆、福州、广州、武汉、南京、北京、深圳、上海、苏州、合肥、沈阳，"天方地圆"的四面舞台设计大气精致，配以声控全场荧光棒效果变换，令观众对李健演唱会有了崭新的多维空间感官体验。演唱会座无虚席一票难求，李健用心地根据地域特征做不同的设计，有对自己经典作品的再诠释，有仅仅在演唱会才能听到LIVE的特别曲，还有观众意想不到对他个人而言别有意义的作品，让听者在温习老歌时得以昔日重来的温情感受，同时随着巡演的进行也逐渐释放新的作品。
+                                    </p>
+                                    <p><img width="600" height="384" src="../img/details4.png">
+                                    </p>
+                                    <p>在李健看来，演唱会的魅力是单纯层次的唱片无法取代的，真正感受一个歌手，他在现场所展现的面貌、声音、情感，才是更直观的体现。</p>
+                                    <p><img width="600" height="402" src="../img/details5.png">
+                                    </p>
+                                    <p>我希望"不止 是李健"不刻意给人那么多回忆，但人们又在其间不由自主地去回想很多事情。好的演唱会和一部电影一本好书的效果是一样的。--李健</p>
+                                    <p><img width="600" height="337" src="../img/details6.png">
+                                    </p>
+                                    <p>"不止 是李健"世界巡回演唱会［安可场］南京站，2019年12月21日19:30南京青奥体育公园体育馆盛况再续！</p>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+
+
+
+
+
+
+
+
+
+
                 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-3 content_right">
+
+                    <div class="service">
+                        <a class="seat__map"><i class="glyphicon glyphicon-bed"></i> 查看座位图</a>
+                        <div class="service-note">
+                            <div class="service-note-name"><i class="glyphicon glyphicon-remove-circle"></i>
+                                不支持退
+                            </div>
+                            <div class="service-note-desc">
+                                票品为有价证券，非普通商品，其背后承载的文化服务具有时效性、稀缺性等特征，不支持退换。如您购票后无法正常观看，还请自行处理</div>
+                        </div>
+                        <div class="service-note">
+                            <div class="service-note-name"><i class="glyphicon glyphicon-remove-circle"></i>
+                                不支持选座
+                            </div>
+                            <div class="service-note-desc">本项目不支持自主选座，同一个订单优先连座</div>
+                        </div>
+                        <div class="service-note">
+                            <div class="service-note-name"><i class="glyphicon glyphicon-ok-circle"></i>
+                                快递票
+                            </div>
+                            <div class="service-note-desc">
+                                快递票：纸质票会在开票后快递到您留下的收货地址，需您承担邮寄费用。注：离开演时间仅3天时，不再寄送快递票，支持在指定取票地点取票（具体以下单后票夹信息为准）</div>
+                        </div>
+                        <div class="service-note">
+                            <div class="service-note-name"><i class="glyphicon glyphicon-ok-circle"></i>
+                                纸质发票
+                            </div>
+                            <div class="service-note-desc">
+                                该项目支持开具纸质发票，请您在演出开始前通过订单页补开，发票将在演出结束后1个月左右，统一由主办方提供</div>
+                        </div>
+                        <div class="service-qrcode clearfix">
+                            <div class="service-qrcode-text text-center "><span>手机扫一扫</span>
+                                <span>下单更快捷</span></div>
+                            <img src="https://damai-item.oss-cn-beijing.aliyuncs.com/projQcode/6058656942/2/605865694265.jpg"
+                                alt="" class="service-qrcode-img">
+                        </div>
+                    </div>
+                </div>
             </div>
 
+
+
+
+
+
         </div>
-
-
     </section>
 
 
@@ -422,8 +415,5 @@
 
         </div>
     </footer>
-
-
-</body>
 
 </html>
