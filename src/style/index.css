@@ -96,6 +96,17 @@ header #header .row div:nth-child(3) {
 }
 header #header .row div:nth-child(3) > span:nth-child(1) {
   margin-right: 15px;
+}
+header #header .row div:nth-child(3) .indexactive {
+  color: #FF1268;
+}
+header #header .row div:nth-child(3) .index {
+  text-decoration: none;
+  display: inline;
+  color: #333;
+  margin-right: 15px;
+}
+header #header .row div:nth-child(3) .index:hover {
   color: #FF1268;
 }
 header #header .row div:nth-child(3) span:nth-child(2):hover {
@@ -286,6 +297,153 @@ a {
 }
 #main {
   padding-bottom: 20px;
+}
+#main #slide ul {
+  list-style: none;
+}
+#main #slide .carousel-content {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  margin: 0 auto;
+}
+#main #slide .carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+#main #slide .carousel li {
+  float: left;
+  position: absolute;
+  display: none;
+}
+#main #slide .carousel li,
+#main #slide .carousel li img {
+  width: 100%;
+  height: 100%;
+}
+#main #slide .carousel-index {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#main #slide .carousel-index li {
+  float: left;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 3px;
+  color: #fff;
+}
+#main #slide .carousel-index li.current-index {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#main #slide .carousel-index li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#main #slide .carousel-prev,
+#main #slide .carousel-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  margin: auto;
+  width: 32px;
+  height: 40px;
+}
+#main #slide .carousel-prev img,
+#main #slide .carousel-next img {
+  width: 100%;
+  height: 100%;
+}
+#main #slide .carousel-prev {
+  left: 0;
+}
+#main #slide .carousel-next {
+  right: 0;
+}
+#main #nav {
+  list-style: none;
+  margin-top: 15px !important;
+  padding: 22px 0 25px 0;
+  border: 1px solid #EBEBEB;
+  zoom: 1;
+  padding-bottom: 15px;
+}
+#main #nav li {
+  float: left;
+  width: 10%;
+}
+#main #nav li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+#main #nav li a:hover p {
+  color: #FF1268 !important;
+}
+#main #nav li a > span {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+#main #nav li a > p {
+  font-size: 16px;
+  color: #111;
+  text-align: center;
+}
+#main #nav li a > p:hover {
+  color: #FF1268 !important;
+}
+#main #nav li:nth-child(1) > a > span {
+  background: url('../img/icon.png') 0px 0px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(2) > a > span {
+  background: url('../img/icon.png') 0px -68px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(3) > a > span {
+  background: url('../img/icon.png') 0px -130px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(4) > a > span {
+  background: url('../img/icon.png') 0px -190px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(5) > a > span {
+  background: url('../img/icon.png') 0px -250px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(6) > a > span {
+  background: url('../img/icon.png') 0px -310px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(7) > a > span {
+  background: url('../img/icon.png') 0px -375px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(8) > a > span {
+  background: url('../img/icon.png') 0px -435px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(9) > a > span {
+  background: url('../img/icon.png') 0px -500px no-repeat;
+  background-size: 50px;
+}
+#main #nav li:nth-child(10) > a > span {
+  background: url('../img/icon.png') 0px -560px no-repeat;
+  background-size: 50px;
 }
 #main .content_1 {
   padding: 20px;

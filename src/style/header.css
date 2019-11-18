@@ -96,6 +96,17 @@ header #header .row div:nth-child(3) {
 }
 header #header .row div:nth-child(3) > span:nth-child(1) {
   margin-right: 15px;
+}
+header #header .row div:nth-child(3) .indexactive {
+  color: #FF1268;
+}
+header #header .row div:nth-child(3) .index {
+  text-decoration: none;
+  display: inline;
+  color: #333;
+  margin-right: 15px;
+}
+header #header .row div:nth-child(3) .index:hover {
   color: #FF1268;
 }
 header #header .row div:nth-child(3) span:nth-child(2):hover {

@@ -1,0 +1,510 @@
+@charset 'utf-8';
+* {
+  margin: 0;
+  padding: 0;
+}
+.pointer {
+  cursor: pointer;
+}
+header {
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 2px 16px 0 rgba(220, 220, 220, 0.5);
+  font-size: 16px;
+  font-style: '微软雅黑';
+  font-weight: 400;
+}
+header #header {
+  height: 100%;
+}
+header #header .row > div {
+  height: 100%;
+  line-height: 72px;
+}
+header #header .row .headerlogo {
+  padding: 0;
+}
+header #header .row .headerlogo > img {
+  width: 92px;
+  height: auto;
+  margin-top: 15px;
+  float: left;
+  cursor: pointer;
+}
+header #header .row div:nth-child(2) {
+  padding-right: 0;
+}
+header #header .row div:nth-child(2):hover > .city-header {
+  display: block;
+}
+header #header .row div:nth-child(2) .city-header {
+  width: 626px;
+  z-index: 999;
+  position: absolute;
+  left: -115px;
+  top: 0;
+  margin-top: 60px;
+  background: #FFF;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding: 21px;
+  line-height: 30px;
+  display: none;
+}
+header #header .row div:nth-child(2) .city-header span {
+  margin-right: 8px;
+}
+header #header .row div:nth-child(2) .city-header span:hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(2) .city-header ::after {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 175px;
+  margin-top: -5.5px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fff #fff transparent transparent;
+  transform: rotate(-45deg);
+  box-shadow: 1px -1px 1px #ccc;
+}
+header #header .row .location::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  background: url('../img/logo2.png');
+  background-size: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+header #header .row .triangle {
+  font-size: 12px;
+  cursor: pointer;
+}
+header #header .row div:nth-child(2) > span {
+  cursor: pointer;
+}
+header #header .row div:nth-child(3) {
+  cursor: pointer;
+  padding-left: 0;
+}
+header #header .row div:nth-child(3) > span:nth-child(1) {
+  margin-right: 15px;
+}
+header #header .row div:nth-child(3) .indexactive {
+  color: #FF1268;
+}
+header #header .row div:nth-child(3) .index {
+  text-decoration: none;
+  display: inline;
+  color: #333;
+  margin-right: 15px;
+}
+header #header .row div:nth-child(3) .index:hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(3) span:nth-child(2):hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(4) {
+  height: 100%;
+  position: relative;
+}
+header #header .row div:nth-child(4)::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  display: block;
+  background: url('../img/logo3.png');
+  background-size: 18px;
+  position: absolute;
+  left: 100px;
+  top: 27px;
+}
+header #header .row div:nth-child(4) .search {
+  width: 253px;
+  height: 44px;
+  line-height: 72px;
+  z-index: 10;
+  font-size: 16px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  padding: 0 10px 0 54px;
+  border-top-left-radius: 46px;
+  border-bottom-left-radius: 46px;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  border-right-color: #FF1268;
+  box-sizing: content-box;
+}
+header #header .row div:nth-child(4) .btn-search {
+  width: 82px;
+  position: absolute;
+  right: 4px;
+  top: 13px;
+  display: inline-block;
+  background: #FF1268;
+  line-height: 46px;
+  font-size: 16px;
+  text-align: center;
+  color: #FFF;
+  border-radius: 0 27px 27px 0;
+  z-index: 11;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+header #header .row div:nth-child(5) {
+  cursor: pointer;
+  position: relative;
+}
+header #header .row div:nth-child(5)::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: url('../img/logo4.png');
+  background-size: 23px;
+  position: absolute;
+  left: 26px;
+  top: 25px;
+}
+header #header .row div:nth-child(5):hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(6) {
+  cursor: pointer;
+  position: relative;
+}
+header #header .row div:nth-child(6)::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: url('../img/logo5.png');
+  background-size: 23px;
+  position: absolute;
+  left: 27px;
+  top: 25px;
+}
+header #header .row div:nth-child(6):hover {
+  color: #FF1268;
+}
+header #header .row div:nth-child(7) {
+  cursor: pointer;
+  position: relative;
+}
+header #header .row div:nth-child(7)::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: url('../img/logo6.png');
+  background-size: 23px;
+  position: absolute;
+  left: 6px;
+  top: 25px;
+}
+header #header .row div:nth-child(7):hover {
+  color: #FF1268;
+}
+footer {
+  background-color: #f8f8f8;
+}
+footer .footerheader {
+  list-style: none;
+  padding: 30px 100px;
+}
+footer .footerheader > li {
+  float: left;
+  margin: 0 20px;
+  position: relative;
+}
+footer .footerheader > li > a {
+  color: #000;
+}
+footer .footerheader > li > a:hover {
+  color: #ff1268;
+}
+footer .footerheader > li::after {
+  content: '|';
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+}
+footer .footerheader > li:last-child::after {
+  content: '';
+}
+footer .fu {
+  position: relative;
+}
+footer .fu .f2 {
+  padding-left: 30px;
+  padding-right: 60px;
+}
+footer .fu .downapp {
+  position: absolute;
+  left: 250px;
+  top: 110px;
+}
+footer .fu .fright {
+  padding-left: 20px;
+  font-size: 13px;
+}
+footer .fu .fright .online {
+  display: block;
+  width: 98px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background-color: #ff1268;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+footer .fu .fright ul {
+  list-style: none;
+  margin: 10px 0;
+}
+footer .fu .fright ul li {
+  float: left;
+  margin: 0 5px;
+}
+footer .fu .fright ul li a {
+  font-size: 13px;
+  color: #000;
+}
+footer .fu .fright ul li a:hover {
+  color: #ff1268;
+}
+footer .fu .fright span {
+  display: block;
+  margin: 6px 5px;
+}
+footer .fu .fright .fpic {
+  margin-top: 10px;
+  cursor: pointer;
+}
+#main {
+  margin-bottom: 50px;
+}
+#main .line {
+  display: block;
+  width: 100%;
+  margin: 5px 0 30px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+#main h4 {
+  line-height: 80px;
+  font-weight: 400;
+}
+#main .progress {
+  height: 80px;
+  user-select: none;
+  margin: 20px 0;
+}
+#main .progress > img {
+  width: 100%;
+  height: 80px;
+}
+#main .distribution {
+  cursor: pointer;
+}
+#main .distribution > img {
+  width: 80px;
+}
+#main .distribution > span {
+  display: block;
+  color: #ff1268;
+  font-size: 14px;
+  line-height: 60px;
+  text-indent: 25px;
+}
+#main .address p,
+#main .linkman p {
+  padding: 11px 34px;
+  color: #666;
+  line-height: 16px;
+  font-size: 12px;
+  border: 1px solid #f1f1f1;
+  position: relative;
+  margin-bottom: 14px;
+  background: #fcfcfc;
+  margin-bottom: 20px;
+}
+#main .address p > span,
+#main .linkman p > span {
+  color: #ff1268;
+}
+#main .address > button,
+#main .linkman > button {
+  height: 24px;
+  line-height: 22px;
+  font-size: 12px;
+  padding: 0 10px;
+  color: #333;
+  background-color: #F7F8FA;
+  border: #C4C6CF 1px solid;
+  border-radius: 4px;
+  outline: none;
+}
+#main .pay .payactive {
+  border: 2px solid #ff1268 !important;
+  position: relative;
+}
+#main .pay .payactive::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 14px;
+  background: url('../img/shopcar4.png') no-repeat;
+  right: -22px;
+  bottom: 0;
+}
+#main .pay .paybox {
+  width: 241px;
+  height: 76px;
+  border: 2px solid transparent;
+  padding-top: 25px;
+  cursor: pointer;
+}
+#main .confirm .table thead .tableheader {
+  font-size: 12px;
+  padding: 12px 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#main .confirm .table thead .tableheader > th {
+  text-align: center;
+  font-weight: 400;
+  color: #333;
+  line-height: 20px;
+}
+#main .confirm .table tbody tr > td:nth-child(1) > img {
+  float: left;
+  margin: 20px;
+}
+#main .confirm .table tbody tr > td:nth-child(1) > div {
+  margin-top: 20px;
+}
+#main .confirm .table tbody tr > td:nth-child(1) > div > p {
+  font-size: 12px;
+  margin-bottom: 0;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+#main .confirm .table tbody tr > td:nth-child(1) > div > p:nth-child(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4a4a4a;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+#main .confirm .table tbody tr > td:nth-child(2) {
+  padding: 22px 26px;
+  min-height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 12px;
+  color: #6c6c6c;
+}
+#main .confirm .table tbody tr > td:nth-child(3) {
+  line-height: 110px;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+#main .confirm .table tbody tr > td:nth-child(4) {
+  line-height: 110px;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+#main .confirm .table tbody tr > td:nth-child(5) {
+  line-height: 110px;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+#main .confirm .table tbody tr > td:nth-child(6) {
+  line-height: 110px;
+  text-align: center;
+  color: #333;
+  font-weight: 400;
+}
+#main .confirm .table tfoot {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+#main .confirm .table tfoot tr td {
+  border-top: 0;
+  padding: 16px;
+}
+#main .confirm .table tfoot tr td:nth-child(1) {
+  color: #826666;
+  line-height: 16px;
+  font-size: 12px;
+}
+#main .confirm .table tfoot tr td:nth-child(2) {
+  color: #826666;
+  line-height: 16px;
+  font-size: 12px;
+}
+#main .confirm .table tfoot tr td:nth-child(2) b {
+  float: right;
+  color: #000;
+  font-weight: 700;
+}
+#main .term-wrapper > div {
+  width: 100%;
+  text-align: right;
+  line-height: 20px;
+  color: #826666;
+  font-size: 12px;
+}
+#main .term-wrapper > div a {
+  color: #ff1268;
+  text-decoration: none;
+}
+#main .all {
+  text-align: right;
+  font-size: 12px;
+  padding: 16px 14px;
+  background: #f7f7f7;
+}
+#main .all .truepay span {
+  color: #333;
+  line-height: 16px;
+}
+#main .all .truepay span > b {
+  font-size: 26px;
+  line-height: 32px;
+  color: #999;
+  font-weight: 400;
+}
+#main .all .truepay span > em {
+  color: #ff1268;
+  font-size: 26px;
+  line-height: 32px;
+  font-style: normal;
+}
+#main .agreesub {
+  background: #ff1268;
+  color: #fff;
+  line-height: 20px;
+  padding: 10px 30px;
+  height: auto;
+  outline: none;
+  float: right;
+  margin-top: 10px;
+}

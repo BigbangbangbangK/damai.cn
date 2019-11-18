@@ -9,12 +9,202 @@ a {
 
 #main {
     padding-bottom: 20px;
-    // height: 1000px;
-    // background: rgb(209, 231, 238);
+
+    // 轮播图
+    #slide {
+        // height: 600px;
+
+        ul {
+            list-style: none;
+        }
+
+        .carousel-content {
+            // width: 11400px;
+            width: 100%;
+            height: 320px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+
+            li {
+                float: left;
+                position: absolute;
+                display: none;
+            }
+        }
+
+        .carousel li,
+        .carousel li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-index {
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            li {
+                float: left;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                text-align: center;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.3);
+                font-size: 12px;
+                cursor: pointer;
+                margin: 0 3px;
+                color: #fff;
+
+                &.current-index {
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+            }
+        }
+
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+            margin: auto;
+            width: 32px;
+            height: 40px;
+        }
+
+        .carousel-prev img,
+        .carousel-next img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-prev {
+            left: 0;
+        }
+
+        .carousel-next {
+            right: 0;
+        }
+
+    }
+
+
+    #nav {
+        list-style: none;
+        margin-top: 15px !important;
+        padding: 22px 0 25px 0;
+        border: 1px solid #EBEBEB;
+        zoom: 1;
+        padding-bottom: 15px;
+
+        li {
+            float: left;
+            width: 10%;
+
+
+
+            a {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+
+                &:hover p {
+                    color: #FF1268 !important;
+                }
+
+
+                &>span {
+                    display: block;
+                    width: 48px;
+                    height: 48px;
+                    margin: 0 auto;
 
 
 
 
+                }
+
+
+                &>p {
+                    font-size: 16px;
+                    color: #111;
+                    text-align: center;
+
+                    &:hover {
+                        color: #FF1268 !important;
+                    }
+                }
+
+
+
+            }
+
+            &:nth-child(1)>a>span {
+                background: url('../img/icon.png') 0px 0px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(2)>a>span {
+                background: url('../img/icon.png') 0px -68px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(3)>a>span {
+                background: url('../img/icon.png') 0px -130px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(4)>a>span {
+                background: url('../img/icon.png') 0px -190px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(5)>a>span {
+                background: url('../img/icon.png') 0px -250px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(6)>a>span {
+                background: url('../img/icon.png') 0px -310px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(7)>a>span {
+                background: url('../img/icon.png') 0px -375px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(8)>a>span {
+                background: url('../img/icon.png') 0px -435px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(9)>a>span {
+                background: url('../img/icon.png') 0px -500px no-repeat;
+                background-size: 50px;
+            }
+
+            &:nth-child(10)>a>span {
+                background: url('../img/icon.png') 0px -560px no-repeat;
+                background-size: 50px;
+            }
+        }
+    }
 
 
     // content_1 演唱会

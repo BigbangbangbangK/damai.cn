@@ -10,7 +10,8 @@ require.config({
 require(['jquery', 'deitem', 'total'], function ($, deitem, total) {
     deitem.detailitem(function (id) {
         $('#buy').on('click', function () {
-            deitem.addcookie(id, $('#num').val(), $('.total>span>span').text())
+            deitem.addcookie(id, $('#num').val(), parseInt($('.ticketacitve').text()))
+            location.href = `${baseUrl}/src/html/shopcar.html`;
         })
     }); //详情页渲染
     // deitem.buyurl(); //购买按钮跳转页面

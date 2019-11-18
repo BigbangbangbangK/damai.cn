@@ -35,11 +35,11 @@ define([
                             <div class="session">场次<span>${res.time}</span></div>
                             <div class="ticket clearfix">票档
                                 <ul>
-                                    <li>${price_num[0].price}元</li>
+                                    <li class="ticketacitve">${price_num[0].price}元</li>
                                     <li>${price_num[1].price}元</li>
                                     <li>${price_num[2].price}元</li>
                                     <li>${price_num[3].price}元</li>
-                                    <li class="ticketacitve">${price_num[4].price}元</li>
+                                    <li >${price_num[4].price}元</li>
                                 </ul>
                             </div>
                             <div class="num">数量
@@ -50,7 +50,7 @@ define([
                                 </div>
                             </div>
                             <div class="total">
-                                合计 <span><b>￥</b><span>1280.00</span></span>
+                                合计 <span><b>￥</b><span>${parseInt(price_num[0].price).toFixed(2)}</span></span>
                             </div>
                             <button id="buy">立即购买</button>
                         </div>
@@ -99,23 +99,17 @@ define([
 
                     $('.content_left').append(str);
                     callback && callback(id);
-                    // , $('#num').val(), $('.total>span>span').text()
-
-
-
-
                 }
             });
         },
-        buyurl: function () {
-            $('.content_left').on('click', '#buy', function () {
-                location.href = `${baseUrl}/src/html/shopcar.html`
-            })
-        },
+        // buyurl: function () {
+        //     $('.content_left').on('click', '#buy', function () {
+        //         location.href = `${baseUrl}/src/html/shopcar.html`
+        //     })
+        // },
         num: {
             add: function (callback) {
                 $('.content_left').on('click', '.add', function () {
-
                     if ($(this).prev().val() == 6) {
                         $(this).addClass('min');
                     } else {
@@ -144,12 +138,34 @@ define([
                 $('.minus').addClass('min');
                 $('.add').removeClass('min');
                 $('#num').val(1);
-
                 callback && callback()
             });
         },
-        addcookie: function (id, num, total) {
-            console.log(id, num, total);
+        addcookie: function (id, num, price) {
+            let shop = cookie.get('shop');
+
+            let product = {
+                id: id,
+                num: num,
+                price: price,
+                // total: total
+            }
+            if (shop) {
+                shop = JSON.parse(shop)
+                console.log(shop);
+                if (shop.some(elm => elm.id == id)) {
+                    shop.forEach(elm => {
+                        elm.id == id ? elm.num = num : null;
+                    })
+                } else {
+                    shop.push(product);
+                }
+
+            } else {
+                shop = [];
+                shop.push(product);
+            }
+            cookie.set('shop', JSON.stringify(shop), 1)
         }
     }
 });
