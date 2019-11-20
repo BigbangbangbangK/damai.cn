@@ -96,6 +96,17 @@ header #header .row div:nth-child(3) {
 }
 header #header .row div:nth-child(3) > span:nth-child(1) {
   margin-right: 15px;
+}
+header #header .row div:nth-child(3) .indexactive {
+  color: #FF1268;
+}
+header #header .row div:nth-child(3) .index {
+  text-decoration: none;
+  display: inline;
+  color: #333;
+  margin-right: 15px;
+}
+header #header .row div:nth-child(3) .index:hover {
   color: #FF1268;
 }
 header #header .row div:nth-child(3) span:nth-child(2):hover {
@@ -152,8 +163,15 @@ header #header .row div:nth-child(4) .btn-search {
 header #header .row div:nth-child(5) {
   cursor: pointer;
   position: relative;
+  padding-right: 0;
 }
-header #header .row div:nth-child(5)::before {
+header #header .row div:nth-child(5) a {
+  color: #333;
+}
+header #header .row div:nth-child(5) a:hover {
+  text-decoration: none;
+}
+header #header .row div:nth-child(5) a::before {
   content: '';
   width: 23px;
   height: 23px;
@@ -161,8 +179,15 @@ header #header .row div:nth-child(5)::before {
   background: url('../img/logo4.png');
   background-size: 23px;
   position: absolute;
-  left: 26px;
+  left: 40px;
   top: 25px;
+}
+header #header .row div:nth-child(5) .geren {
+  display: block;
+  padding-left: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 header #header .row div:nth-child(5):hover {
   color: #FF1268;
@@ -413,4 +438,9 @@ footer .fu .fright .fpic {
   padding-left: 130px;
   margin: 3px;
   color: #666;
+}
+#main #reg > p {
+  position: absolute;
+  bottom: 10px;
+  left: 220px;
 }

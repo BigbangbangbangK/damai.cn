@@ -30,7 +30,7 @@
             <div class="center-block regbox">
                 <div class="reg text-center" id="reg">
                     <div>
-                        <label for="phone">手机号:</label>
+                        <label for="phone">手机号: <span class="confirm phonecon">手机输入有误</span></label>
                         <select name="" id="">
                             <option value="dalu">中国大陆+86</option>
                             <option value="dalu">中国台湾+886</option>
@@ -40,12 +40,15 @@
                         <input type="text" name="phone" id="phone">
                     </div>
                     <div>
-                        <label for="password">输入密码:</label>
+                        <label for="password">输入密码:<span class="confirm passcon">密码强度:<b
+                                    class="passstr"></b></span></label>
                         <input type="password" name="password" id="password">
+
                     </div>
                     <div>
-                        <label for="agpassword">确认密码:</label>
+                        <label for="agpassword">确认密码: <span class="confirm agacon">密码输入有误</span></label>
                         <input type="password" name="agpassword" id="agpassword">
+
                     </div>
                     <div class="verify">
                         <label class="text-right">滑动验证码:</label>
@@ -62,7 +65,7 @@
                     <script type="text/javascript" src="../js/slide.js"></script>
 
                     <div class="agreed">
-                        <input type="checkbox" name="agreed" id="">
+                        <input type="checkbox" name="agreed" id="checked">
                         <span>
                             我已阅读并同意<a href="">《会员协议》</a>和<a href="">《隐私权条款》</a>
                         </span>

@@ -4,6 +4,8 @@ require.config({
         md5: './jquery.md5',
         reg: './reg',
         login: './login',
+        cookie: './cookie',
+        passwordstrong: './passwordstrong'
     },
     shim: {
         md5: ['jquery']
@@ -12,7 +14,8 @@ require.config({
 
 // 注册
 require(['jquery', 'reg'], function ($, reg) {
-    reg.register('#regbtn')
+    reg.register('#phone')
+    reg.verify();
 })
 
 

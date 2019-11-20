@@ -163,8 +163,15 @@ header #header .row div:nth-child(4) .btn-search {
 header #header .row div:nth-child(5) {
   cursor: pointer;
   position: relative;
+  padding-right: 0;
 }
-header #header .row div:nth-child(5)::before {
+header #header .row div:nth-child(5) a {
+  color: #333;
+}
+header #header .row div:nth-child(5) a:hover {
+  text-decoration: none;
+}
+header #header .row div:nth-child(5) a::before {
   content: '';
   width: 23px;
   height: 23px;
@@ -172,8 +179,15 @@ header #header .row div:nth-child(5)::before {
   background: url('../img/logo4.png');
   background-size: 23px;
   position: absolute;
-  left: 26px;
+  left: 40px;
   top: 25px;
+}
+header #header .row div:nth-child(5) .geren {
+  display: block;
+  padding-left: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 header #header .row div:nth-child(5):hover {
   color: #FF1268;

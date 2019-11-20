@@ -9,7 +9,6 @@
     $result = $mysqli->query($sql); //执行查询语句
 
     if($result->num_rows>0){
-        // 数据库中有数据
         echo '{"msg":"用户名已存在"}';
         $mysqli->close();
         die;

@@ -163,8 +163,15 @@ header #header .row div:nth-child(4) .btn-search {
 header #header .row div:nth-child(5) {
   cursor: pointer;
   position: relative;
+  padding-right: 0;
 }
-header #header .row div:nth-child(5)::before {
+header #header .row div:nth-child(5) a {
+  color: #333;
+}
+header #header .row div:nth-child(5) a:hover {
+  text-decoration: none;
+}
+header #header .row div:nth-child(5) a::before {
   content: '';
   width: 23px;
   height: 23px;
@@ -172,8 +179,15 @@ header #header .row div:nth-child(5)::before {
   background: url('../img/logo4.png');
   background-size: 23px;
   position: absolute;
-  left: 26px;
+  left: 40px;
   top: 25px;
+}
+header #header .row div:nth-child(5) .geren {
+  display: block;
+  padding-left: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 header #header .row div:nth-child(5):hover {
   color: #FF1268;
@@ -390,6 +404,9 @@ footer .fu .fright .fpic {
   color: #333;
   line-height: 20px;
 }
+#main .confirm .table tbody tr:hover .del {
+  display: block !important;
+}
 #main .confirm .table tbody tr > td:nth-child(1) > img {
   float: left;
   margin: 20px;
@@ -442,6 +459,15 @@ footer .fu .fright .fpic {
   text-align: center;
   color: #333;
   font-weight: 400;
+}
+#main .confirm .table tbody tr > td:nth-child(7) .del {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 110px;
+  text-align: center;
+  color: red;
+  display: none;
 }
 #main .confirm .table tfoot {
   background-color: rgba(0, 0, 0, 0.03);

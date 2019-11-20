@@ -26,7 +26,6 @@ define([
                             let arr = shop.filter((val, index) => {
                                 return val.id == elm.id
                             })
-                            console.log(arr);
                             str += ` 
                         <tr>
                             <td>
@@ -52,6 +51,7 @@ define([
                             <td>
                                 <span class="allprice">${(arr[0].price * arr[0].num).toFixed(2)}</span>
                             </td>
+                            <td><i class="glyphicon glyphicon-remove del" date-delid="${arr[0].id}"></i></td>
                         </tr>`;
                             allprice += arr[0].price * arr[0].num;
                         });
@@ -61,6 +61,16 @@ define([
                 });
             }
 
+        },
+        delItem: function () {
+            $('tbody').on('click', '.del', function () {
+                let arr = JSON.parse(cookie.get('shop'));
+                let delid = $(this).attr('date-delid');
+                let delarr = arr.filter(elm => elm.id == delid)
+                arr.splice(arr.indexOf(delarr[0]), 1);
+                cookie.set('shop', JSON.stringify(arr), 1);
+                location.reload();
+            })
         }
     }
 
