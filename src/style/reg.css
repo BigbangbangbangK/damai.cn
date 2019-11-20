@@ -353,6 +353,13 @@ footer .fu .fright .fpic {
   text-align: left;
   display: none;
 }
+#main .regbox #reg div .isTrue {
+  position: absolute;
+  top: 0px;
+  right: -510px;
+  width: 90px;
+  text-align: left;
+}
 #main .regbox #reg div label {
   width: 120px;
   color: #666;

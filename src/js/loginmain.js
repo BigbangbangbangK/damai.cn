@@ -14,8 +14,11 @@ require.config({
 
 // 注册
 require(['jquery', 'reg'], function ($, reg) {
-    reg.register('#phone')
-    reg.verify();
+    reg.verify(function () {
+        reg.register()
+    }, function () {
+        reg.phone()
+    });
 })
 
 
@@ -24,5 +27,6 @@ require(['jquery', 'reg'], function ($, reg) {
 // 登录
 require(['jquery', 'login'], function ($, login) {
     login.loginEv('#loginbtn');
-    login.tabs()
+    login.tabs();
+    login.clear();
 })

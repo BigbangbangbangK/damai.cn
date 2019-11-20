@@ -264,3 +264,179 @@ header #header .userlist > li a:hover {
 header #header .userlist > li:hover {
   background-color: #fff4f8;
 }
+footer {
+  background-color: #f8f8f8;
+}
+footer .footerheader {
+  list-style: none;
+  padding: 30px 100px;
+}
+footer .footerheader > li {
+  float: left;
+  margin: 0 20px;
+  position: relative;
+}
+footer .footerheader > li > a {
+  color: #000;
+}
+footer .footerheader > li > a:hover {
+  color: #ff1268;
+}
+footer .footerheader > li::after {
+  content: '|';
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+}
+footer .footerheader > li:last-child::after {
+  content: '';
+}
+footer .fu {
+  position: relative;
+}
+footer .fu .f2 {
+  padding-left: 30px;
+  padding-right: 60px;
+}
+footer .fu .downapp {
+  position: absolute;
+  left: 250px;
+  top: 110px;
+}
+footer .fu .fright {
+  padding-left: 20px;
+  font-size: 13px;
+}
+footer .fu .fright .online {
+  display: block;
+  width: 98px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background-color: #ff1268;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+footer .fu .fright ul {
+  list-style: none;
+  margin: 10px 0;
+}
+footer .fu .fright ul li {
+  float: left;
+  margin: 0 5px;
+}
+footer .fu .fright ul li a {
+  font-size: 13px;
+  color: #000;
+}
+footer .fu .fright ul li a:hover {
+  color: #ff1268;
+}
+footer .fu .fright span {
+  display: block;
+  margin: 6px 5px;
+}
+footer .fu .fright .fpic {
+  margin-top: 10px;
+  cursor: pointer;
+}
+#mian .searchtitle {
+  height: 100px;
+}
+#mian .nav-search {
+  width: 870px;
+  margin-bottom: 0;
+  list-style: none;
+  height: 38px;
+  line-height: 38px;
+  background: #f5f5f5;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  margin-right: 0;
+  margin-left: 0;
+}
+#mian .nav-search li {
+  float: left;
+  height: 100%;
+  padding: 0 24px;
+  border-right: 1px solid #eaeaea;
+  color: #666;
+  cursor: pointer;
+}
+#mian .nav-search .activeli {
+  background-color: #fff;
+  color: #ed0a75;
+  margin-top: 1px;
+}
+#mian .nav-search .changepage {
+  padding: 0;
+  float: right;
+  border-left: 1px solid #eaeaea;
+  color: #333;
+}
+#mian .nav-search .changepage a {
+  padding: 0 20px;
+  text-decoration: none;
+}
+#mian .searchcontent {
+  width: 870px;
+  min-height: 250px;
+  border: 1px solid #eaeaea;
+  border-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+#mian .searchcontent .content {
+  padding: 18px;
+}
+#mian .searchcontent .content a {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #eaeaea;
+  height: 220px;
+  text-decoration: none;
+}
+#mian .searchcontent .content a > img {
+  width: 153px;
+  height: 200px;
+  position: absolute;
+}
+#mian .searchcontent .content a > .item {
+  padding-left: 170px;
+}
+#mian .searchcontent .content a > .item h4 {
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333;
+  font-weight: normal;
+}
+#mian .searchcontent .content a > .item h4:hover {
+  color: #ed0a75;
+}
+#mian .searchcontent .content a > .item p {
+  margin-bottom: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #999;
+  padding-left: 15px;
+}
+#mian .searchcontent .content a > .item p span {
+  color: #ed0a75;
+}
+#mian .searchcontent .content a > .item .pricebox {
+  position: absolute;
+  bottom: 20px;
+}
+#mian .searchcontent .content a > .item .pricebox span:nth-child(1) {
+  color: #ff1268;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 20px;
+}
+#mian .searchcontent .content a > .item .pricebox span:nth-child(2) {
+  color: #999;
+}

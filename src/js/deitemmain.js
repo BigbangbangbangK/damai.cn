@@ -4,11 +4,13 @@ require.config({
         deitem: './deitem',
         total: './total',
         cookie: './cookie',
-        judgeIslogin: './judgeIslogin'
+        judgeIslogin: './judgeIslogin',
+        search: './search'
+
     }
 })
 
-require(['jquery', 'deitem', 'total', 'judgeIslogin'], function ($, deitem, total, judgeIslogin) {
+require(['jquery', 'deitem', 'total', 'judgeIslogin', 'search'], function ($, deitem, total, judgeIslogin, search) {
     deitem.detailitem(function (id) {
         $('#buy').on('click', function () {
             deitem.addcookie(id, $('#num').val(), parseInt($('.ticketacitve').text()))
@@ -26,4 +28,5 @@ require(['jquery', 'deitem', 'total', 'judgeIslogin'], function ($, deitem, tota
         total.total()
     }); //票价
     judgeIslogin.judge(); //验证是否登录
+    search.searchItem(); //搜索跳转
 })

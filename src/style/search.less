@@ -1,0 +1,140 @@
+@charset 'utf-8';
+
+@import './header.less';
+@import './footer.less';
+
+#mian {
+    // height: 1000px;
+
+    // searchtitle
+    .searchtitle {
+        height: 100px;
+    }
+
+
+
+    .nav-search {
+        width: 870px;
+        margin-bottom: 0;
+        list-style: none;
+        height: 38px;
+        line-height: 38px;
+        background: #f5f5f5;
+        border: 1px solid #eaeaea;
+        font-size: 14px;
+        margin-right: 0;
+        margin-left: 0;
+
+        li {
+            float: left;
+            height: 100%;
+            padding: 0 24px;
+            border-right: 1px solid #eaeaea;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .activeli {
+            // border-color: #dfdfdf #dfdfdf #fff;
+            background-color: #fff;
+            color: #ed0a75;
+            margin-top: 1px;
+        }
+
+        .changepage {
+            padding: 0;
+            float: right;
+            border-left: 1px solid #eaeaea;
+            color: #333;
+
+            a {
+                padding: 0 20px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    // searchcontent
+    .searchcontent {
+        width: 870px;
+        min-height: 250px;
+        border: 1px solid #eaeaea;
+        border-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 50px;
+
+
+
+        .content {
+            padding: 18px;
+
+            a {
+                display: block;
+                position: relative;
+                border-bottom: 1px solid #eaeaea;
+                height: 220px;
+                text-decoration: none;
+
+                &>img {
+                    width: 153px;
+                    height: 200px;
+                    position: absolute;
+                }
+
+                &>.item {
+                    padding-left: 170px;
+
+                    h4 {
+                        font-size: 16px;
+                        line-height: 1.42857143;
+                        color: #333;
+                        font-weight: normal;
+
+                        &:hover {
+                            color: #ed0a75;
+
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 6px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        color: #999;
+                        padding-left: 15px;
+
+                        span {
+                            color: #ed0a75;
+
+                        }
+                    }
+
+                    .pricebox {
+                        position: absolute;
+                        bottom: 20px;
+
+                        span {
+                            &:nth-child(1) {
+                                color: #ff1268;
+                                font-weight: 700;
+                                font-size: 16px;
+                                margin-right: 20px;
+                            }
+
+                            &:nth-child(2) {
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+
+}

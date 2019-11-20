@@ -1,43 +1,65 @@
 define(['jquery', 'md5', 'cookie', 'passwordstrong'], function ($, md5, cookie, passwordstrong) {
     return {
         register: function (select) {
-            $(select).on('click', function () {
-                $.ajax({
-                    type: "post",
-                    url: "http://localhost:8080/www/1910/damai.cn/interface/php/reg.php",
-                    data: {
-                        phone: $('#phone').val(),
-                        password: $('#password').val(),
-                    },
-                    dataType: "json",
-                    success: function (response) {
-                        if (response.msg == '注册成功') {
-                            cookie.set('isLogin', $('#phone').val(), 5);
-                            // location.href = "http://localhost:8080/www/1910/damai.cn/src/html/index1.html";
-                        } else {
-                            $('.confirm').html(response.msg)
-                        }
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8080/www/1910/damai.cn/interface/php/reg.php",
+                data: {
+                    phone: $('#phone').val(),
+                    password: $.md5($('#password').val()),
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (response.msg == '注册成功') {
+                        cookie.set('isLogin', $('#phone').val(), 5);
+                        location.href = "http://localhost:8080/www/1910/damai.cn/src/html/index1.html";
                     }
-                });
+                }
             })
         },
+        phone: function () {
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8080/www/1910/damai.cn/interface/php/phone.php",
+                data: {
+                    phone: $('#phone').val()
+                },
+                dataType: "json",
+                success: function (res) {
+                    // console.log(res.msg);
+                    // console.log($('#phone'));
+
+                    if (res.msg == '已注册') {
+                        $('.isTrue').html(res.msg).css({
+                            'color': 'red',
+                            'display': 'block'
+                        })
+                        $('.phonecon').css('display', 'none')
+                    } else {
+                        $('.isTrue').css('display', 'none')
+                        $('.phonecon').css('display', 'block')
+                    }
+                }
+            });
+        },
         // 注册验证
-        verify: function () {
+        verify: function (register, phone) {
             let reg = {
                 phone: /^(?:(?:\+|00)86)?1[3-9]\d{9}$/,
                 pass: /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/
             }
             //函数防抖
-            function fho(callback, wait) {
-                let timer = null;
-                return function () {
-                    if (timer) clearTimeout(timer);
-                    timer = setTimeout(function () {
-                        callback.apply(this, arguments)
-                    }.bind(this), wait)
-                }
-            }
-            $('#reg input').on('keyup', fho(function () {
+            // function fho(callback, wait) {
+            //     let timer = null;
+            //     return function () {
+            //         if (timer) clearTimeout(timer);
+            //         timer = setTimeout(function () {
+            //             callback.apply(this, arguments)
+            //         }.bind(this), wait)
+            //     }
+            // }
+            // console.log(phone());
+            $('#reg input').on('keyup', function () {
                 switch ($(this)[0].id) {
                     case 'phone':
                         if (reg.phone.test($(this).val())) {
@@ -53,6 +75,7 @@ define(['jquery', 'md5', 'cookie', 'passwordstrong'], function ($, md5, cookie, 
                                 'color': 'red'
                             }).removeClass('glyphicon glyphicon-ok-sign').attr('data-flag', false)
                         }
+                        phone && phone();
                         break;
                     case 'password':
                         if ($(this).val().length < 6) $('.passstr').html('').attr('data-flag', false)
@@ -78,8 +101,8 @@ define(['jquery', 'md5', 'cookie', 'passwordstrong'], function ($, md5, cookie, 
                         break;
                 }
                 count()
-            }, 200))
-            $('#btn').on('mousemove', function () {
+            })
+            $('#reg').on('mouseup', function () {
                 if ($('#verify_xbox').width() == 300) {
                     $('#verify_box').attr('data-flag', true);
                 } else {
@@ -93,8 +116,8 @@ define(['jquery', 'md5', 'cookie', 'passwordstrong'], function ($, md5, cookie, 
                 $('#regbtn').on('click', function () {
                     if ($('#checked')[0].checked) {
                         if (length == 4) {
-                            // cookie.set('isLogin', $('#phone').val(), 5);
-                            // location.href = "http://localhost:8080/www/1910/damai.cn/src/html/index1.html";
+                            // console.log(true);
+                            register && register();
                         }
                     }
                 })

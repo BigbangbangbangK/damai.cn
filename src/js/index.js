@@ -167,8 +167,17 @@ define(['jquery'], function ($) {
                     $('.content_4>.box').append(child1).append(child2);
                 }
             });
+        },
+        searchjump: function () {
+            $('.btn-search').on('click', function () {
+                $(this)[0].href = `http://localhost:8080/www/1910/damai.cn/src/html/search.html?${$('.search').val()}`
+            })
+            $('.search').on('keyup', function (ev) {
+                if (ev.keyCode === 13) {
+                    location.href = `http://localhost:8080/www/1910/damai.cn/src/html/search.html?${$('.search').val()}`
+                }
+            })
         }
-
 
 
 

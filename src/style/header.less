@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+.show {
+    display: block;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -225,6 +229,8 @@ header {
                         left: 40px;
                         top: 25px;
                     }
+
+
                 }
 
 
@@ -297,10 +303,52 @@ header {
                 }
             }
 
+
+
+        }
+
+        .userlist {
+            list-style: none;
+            position: absolute;
+            z-index: 100;
+            top: 60px;
+            right: 430px;
+            width: 135px;
+            background: #fff;
+            border-radius: 5px;
+            display: none;
+
+            &>li {
+                width: 100%;
+                height: 50px;
+                display: block;
+                line-height: 50px;
+                font-size: 14px;
+                letter-spacing: .54px;
+                text-align: center;
+                border-bottom: 1px solid #F2F2F2;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: #111;
+                    display: block;
+
+                    &:hover {
+                        color: #FF1268;
+                    }
+                }
+
+                &:hover {
+
+
+                    background-color: #fff4f8;
+                }
+            }
+
         }
 
 
+
     }
-
-
 }

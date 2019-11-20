@@ -1,7 +1,6 @@
 require.config({
     paths: {
         jquery: '../../node_modules/jquery/dist/jquery.min',
-        shopcar: './shopcar',
         cookie: './cookie',
         judgeIslogin: './judgeIslogin',
         search: './search'
@@ -12,10 +11,9 @@ require.config({
     }
 })
 
-require(['jquery', 'shopcar', 'judgeIslogin', 'search'], function ($, shopcar, judgeIslogin, search) {
-    shopcar.getItem();
-    shopcar.delItem();
+require(['jquery', 'judgeIslogin', 'search'], function ($, judgeIslogin, search) {
     judgeIslogin.judge(); //验证是否登录
-    search.searchItem(); //搜索跳转
-
+    search.searchItem(function () {
+        search.getAjax()
+    });
 })

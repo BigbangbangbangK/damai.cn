@@ -8,15 +8,16 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
                     url: "http://localhost:8080/www/1910/damai.cn/interface/php/login.php",
                     data: {
                         phone: $('#loginphone').val(),
-                        password: $('#loginpassword').val()
+                        password: $.md5($('#loginpassword').val())
                     },
                     dataType: "json",
                     success: function (response) {
-                        // if (response.msg == '注册成功') {
-                        //     cookie.set('isLogin', phone, 5);
-                        //     location.href = "http://localhost:8080/www/1910/damai.cn/src/html/index1.html";
-                        // }
-                        // console.log(response.msg);
+                        if (response.msg == '登陆成功') {
+                            cookie.set('isLogin', $('#loginphone').val(), 5);
+                            location.href = "http://localhost:8080/www/1910/damai.cn/src/html/index1.html";
+                        } else {
+                            $('.prompt').addClass('red').html(response.msg)
+                        }
                     }
                 });
             })
@@ -27,6 +28,14 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
                 let index = $('.tab>li').index(this);
                 $(this).addClass('active').siblings().removeClass('active');
                 $('#reg>div').eq(index).addClass('show').siblings().removeClass('show');
+            })
+        },
+        clear: function () {
+            $('#loginphone').on('click', function () {
+                $('.prompt').removeClass('red')
+            })
+            $('#loginpassword').on('click', function () {
+                $('.prompt').removeClass('red')
             })
         }
     }

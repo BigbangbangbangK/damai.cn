@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script data-main="../js/shopcarmain.js" src="../../node_modules/requirejs/require.js"></script>
+    <script data-main="../js/searchmain.js" src="../../node_modules/requirejs/require.js"></script>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/shopcar.css">
-    <title>shopcar</title>
+    <link rel="stylesheet" href="../style/search.css">
+    <title>search</title>
 </head>
 
 <body>
@@ -191,9 +191,11 @@
                     <input type="text" class="search" placeholder="搜索明星、演出、体育赛事">
                     <div class="btn-search">搜索</div>
                 </div>
+
                 <div class="col-lg-1 text-right login" id="login">
                     <a href="http://localhost:8080/www/1910/damai.cn/src/html/login.html">登录</a>
                 </div>
+
                 <div class="col-lg-1 text-right">
                     下载
                 </div>
@@ -204,135 +206,86 @@
                     <li><a href="http://localhost:8080/www/1910/damai.cn/src/html/personal.html" id="userown">个人信息</a>
                     </li>
                     <li><a href="">账号设置</a></li>
-                    <li><a href="http://localhost:8080/www/1910/damai.cn/src/html/shopcar.html">订单管理</a>
-                    </li>
+                    <li><a href="http://localhost:8080/www/1910/damai.cn/src/html/shopcar.html">订单管理</a></li>
                     <li><a id="userout">退出登录</a></li>
                 </ul>
             </div>
+
     </header>
 
-    <!--  -->
-    <section id="main">
+
+    <section id="mian">
         <div class="container">
-            <div class="progress ">
-                <img src="../img/shopcar1.png" alt="">
-            </div>
-            <div class="distribution">
-                <h4>配送方式</h4>
-                <img src="../img/shopcar2.png" alt="">
-                <span>快递</span>
-                <b class="line"></b>
-            </div>
-            <div class="address">
-                <p><span class="glyphicon glyphicon-info-sign"></span>暂无收货人信息，请点击“使用新地址”添加配送信息</p>
-                <button>使用新地址</button>
-            </div>
-            <div class="linkman">
-                <h4>观演人</h4>
-                <p><span class="glyphicon glyphicon-info-sign"></span>当前暂无常用观演人信息，请点击新增观演人按钮，添加常用观演人。</p>
-                <button>新增观演人</button>
-            </div>
-            <div class="pay">
-                <h4>支付方式</h4>
-                <div class="paybox payactive">
-                    <img src="../img/shopcar3.png" alt="" class="center-block">
+
+
+            <div class="searchleft">
+                <!-- 搜索条件筛选 -->
+                <div class="searchtitle">
+
                 </div>
-            </div>
+                <!-- 搜索导航 -->
+                <ul class="row nav-search">
+                    <li class="activeli">相关度排序</li>
+                    <li>推荐排序</li>
+                    <li>最近开场</li>
+                    <li>最新上架</li>
+                    <li class="changepage"><a href="javascript:;">&lt;</a><span>1/2</span><a
+                            href=" javascript:;">&gt;</a>
+                    </li>
+                </ul>
+                <!-- 搜索内容 -->
 
+                <div class="searchcontent row">
 
-            <div class="confirm ">
-                <h4>确认订单信息</h4>
-                <table class="table table-hover">
-                    <thead>
-                        <tr class="tableheader">
-                            <th>项目信息</th>
-                            <th>座位信息</th>
-                            <th>单价</th>
-                            <th>数量</th>
-                            <th>优惠</th>
-                            <th>小计</th>
-                            <th>删除商品</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <tr>
-                            <td>
-                                <img src="../img/details1.png" alt="" width="62px" height="80px">
-                                <div>
-                                    <p>中国平安“不止 是李健”世界巡回演唱会-南京站【安可场】</p>
-                                    <p class="time">2019.12.21 19:30</p>
-                                    <p class="address">南京青奥体育公园体育馆</p>
+                    <!-- <div class="content box1  clearfix">
+                        <a href="javascript:;">
+                            <img src="../img/a1.jpg" alt="">
+                            <div class="item item1">
+                                <h4>【北京】 头号玩咖·大空间VR密室轰趴团建（北京-北京坊店）</h4>
+                                <p><span class="glyphicon glyphicon-map-marker"></span> 北京 | 头号玩咖(北京-北京坊店)</p>
+                                <p><span class="glyphicon glyphicon-calendar"></span> 2019.07.31-2020.12.31</p>
+                                <div class="pricebox"><span
+                                        class="price"><b>118-138</b>&nbsp;&nbsp;元</span><span>售票中</span>
                                 </div>
-                            </td>
-                            <td>
-                                <span>暂无座位信息</span>
-                            </td>
-                            <td>
-                                <span>1280.00</span>
-                            </td>
-                            <td>
-                                <span>1</span>
-                            </td>
-                            <td>
-                                <span>-</span>
-                            </td>
-                            <td>
-                                <span>1280.00</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../img/details1.png" alt="" width="62px" height="80px">
-                                <div>
-                                    <p>中国平安“不止 是李健”世界巡回演唱会-南京站【安可场】</p>
-                                    <p class="time">2019.12.21 19:30</p>
-                                    <p class="address">南京青奥体育公园体育馆</p>
+                            </div>
+                        </a>
+
+
+                    </div>
+                    <div class="content box1  clearfix">
+                        <a href="javascript:;">
+                            <img src="../img/a1.jpg" alt="">
+                            <div class="item item1">
+                                <h4>【北京】 头号玩咖·大空间VR密室轰趴团建（北京-北京坊店）</h4>
+                                <p><span class="glyphicon glyphicon-map-marker"></span> 北京 | 头号玩咖(北京-北京坊店)</p>
+                                <p><span class="glyphicon glyphicon-calendar"></span> 2019.07.31-2020.12.31</p>
+                                <div class="pricebox"><span
+                                        class="price"><b>118-138</b>&nbsp;&nbsp;元</span><span>售票中</span>
                                 </div>
-                            </td>
-                            <td>
-                                <span>暂无座位信息</span>
-                            </td>
-                            <td>
-                                <span>1280.00</span>
-                            </td>
-                            <td>
-                                <span>1</span>
-                            </td>
-                            <td>
-                                <span>-</span>
-                            </td>
-                            <td>
-                                <span>1280.00</span>
-                            </td>
-                        </tr> -->
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>开具发票：请在支付完成后，前往大麦APP开具发票</td>
-                            <td colspan="6"><span>配送方式：快递</span><b>+12</b></td>
-                        </tr>
-                    </tfoot>
+                            </div>
+                        </a>
 
-                </table>
+
+                    </div> -->
+
+
+                </div>
+
             </div>
 
-            <div class="term-wrapper">
-                <div>
-                    <input type="checkbox">
-                    <span>我已经阅读并同意<a href="javascript:;">《大麦网订票服务条款》</a></span>
-                </div>
-                <div>同意"票品为不记名凭证，请您妥善保管，遗失不补"</div>
+
+            <div class="searchright">
+
+
+
+
+
+
             </div>
-            <div class="all">
-                <div class="truepay">
-                    <span>实付款:&nbsp;&nbsp;&nbsp;<b>￥</b><em class="truepay_all"></em></span>
-                </div>
-                <div class="useraddress"></div>
-            </div>
-            <button class="agreesub">同意以上协议并提交订单</button>
+
         </div>
-
     </section>
+
 
     <!-- footer -->
     <footer>
@@ -383,6 +336,7 @@
 
         </div>
     </footer>
+
 </body>
 
 </html>
