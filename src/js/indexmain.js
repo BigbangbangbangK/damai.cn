@@ -5,18 +5,18 @@ requirejs.config({
         carousel: './slidejs/carousel',
         slideimg: './slideimg',
         judgeIslogin: './judgeIslogin',
-        search: './search'
+        search: './search',
+        lazyload: './lazyload/jquery.lazyload.min'
     },
     shim: {
-
+        lazyload: ['jquery']
     }
 })
 
-require(['jquery', 'index', 'slideimg', 'judgeIslogin', 'search'], function ($, index, slideimg, judgeIslogin, search) {
+require(['jquery', 'index', 'slideimg', 'judgeIslogin', 'search', ], function ($, index, slideimg, judgeIslogin, search) {
     index.getItems(); //商品渲染
     index.searchjump(); //点击搜索跳转到搜索页面
     slideimg.slideimg(); //轮播图
     judgeIslogin.judge(); //验证是否登录
     search.searchItem(); //搜索跳转
-
 })

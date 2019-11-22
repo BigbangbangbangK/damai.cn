@@ -1,5 +1,5 @@
 let baseUrl = 'http://localhost:8080/www/1910/damai.cn'
-define(['jquery'], function ($) {
+define(['jquery', 'lazyload'], function ($, lazyload) {
     return {
         getItems: function () {
             $.ajax({
@@ -60,8 +60,8 @@ define(['jquery'], function ($) {
                                 <div class = "col-lg-3 bleft" >
                                     <a href = "${baseUrl}/src/html/deitem.html?id=${elm.id}"
                                 class = "head_1" >
-                                    <img src = "${baseUrl}/src/img/${details.src1}"
-                                alt = "" >
+                                    <img data-original = "${baseUrl}/src/img/${details.src1}"
+                                alt = "" class="lazy" >
                                     <div class = "fcont" >
                                         <div class = "title" >${elm.title}</div>
                                         <div class = "details" >￥${price}<span>起</span>
@@ -74,7 +74,7 @@ define(['jquery'], function ($) {
                                     <a href = "${baseUrl}/src/html/deitem.html?id=${elm.id}"
                                     class = "item_1" >
                                         <div class="itemimg">
-                                            <img src = "${baseUrl}/src/img/${details.src1}" alt = "" height="159px">
+                                            <img data-original = "${baseUrl}/src/img/${details.src1}" alt = "" height="159px" class="lazy">
                                         </div>
                                         <div class="iteminfo">
                                             <div class="title" title="${elm.title}">${elm.title}</div>
@@ -94,8 +94,8 @@ define(['jquery'], function ($) {
                                 <div class = "col-lg-3 bleft" >
                                     <a href = "${baseUrl}/src/html/deitem.html?id=${elm.id}"
                                 class = "head_1" >
-                                    <img src = "${baseUrl}/src/img/${details.src1}"
-                                alt = "" >
+                                    <img  data-original= "${baseUrl}/src/img/${details.src1}"
+                                alt = ""  class="lazy">
                                     <div class = "fcont" >
                                         <div class = "title" >${elm.title}</div>
                                         <div class = "details" >￥${price}<span>起</span>
@@ -108,7 +108,7 @@ define(['jquery'], function ($) {
                                     <a href = "${baseUrl}/src/html/deitem.html?id=${elm.id}"
                                     class = "item_1" >
                                         <div class="itemimg">
-                                            <img src = "${baseUrl}/src/img/${details.src1}" alt = "" height="159px">
+                                            <img  data-original= "${baseUrl}/src/img/${details.src1}" alt = "" height="159px" class="lazy">
                                         </div>
                                         <div class="iteminfo">
                                             <div class="title" title="${elm.title}">${elm.title}</div>
@@ -128,8 +128,8 @@ define(['jquery'], function ($) {
                                 <div class = "col-lg-3 bleft" >
                                     <a href = "${baseUrl}/src/html/deitem.html?id=${elm.id}"
                                 class = "head_1" >
-                                    <img src = "${baseUrl}/src/img/${details.src1}"
-                                alt = "" >
+                                    <img data-original= "${baseUrl}/src/img/${details.src1}"
+                                alt = ""  class="lazy">
                                     <div class = "fcont" >
                                         <div class = "title" >${elm.title}</div>
                                         <div class = "details" >￥${price}<span>起</span>
@@ -142,7 +142,7 @@ define(['jquery'], function ($) {
                                     <a href = "${baseUrl}/src/html/deitem.html?id=${elm.id}"
                                     class = "item_1" >
                                         <div class="itemimg">
-                                            <img src = "${baseUrl}/src/img/${details.src1}" alt = "" height="159px">
+                                            <img data-original= "${baseUrl}/src/img/${details.src1}" alt = "" height="159px" class="lazy">
                                         </div>
                                         <div class="iteminfo">
                                             <div class="title" title="${elm.title}">${elm.title}</div>
@@ -165,6 +165,11 @@ define(['jquery'], function ($) {
                     $('.content_2>.box').append(opera1).append(opera2);
                     $('.content_3>.box').append(sports1).append(sports2);
                     $('.content_4>.box').append(child1).append(child2);
+                    $("img.lazy").lazyload({
+                        placeholder: "../img/lazyimg1.gif", //用图片提前占位
+                        effect: "fadeIn", // 载入使用何种效果
+                        threshold: -100, // 提前开始加载
+                    });
                 }
             });
         },
@@ -177,7 +182,7 @@ define(['jquery'], function ($) {
                     location.href = `http://localhost:8080/www/1910/damai.cn/src/html/search.html?${$('.search').val()}`
                 }
             })
-        }
+        },
 
 
 
