@@ -21,7 +21,7 @@
     "gulp.spritesmith": "^6.11.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "jquery": "^3.4.1",
     "requirejs": "^2.3.6"
   }
